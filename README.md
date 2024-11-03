@@ -44,7 +44,7 @@
 - openssl 라이브러리를 이용하여 SSL/TLS 기반의 안전한 통신을 지원하는 웹 서버 구현
 - 서버에서 자체 서명된 인증서를 생성하고 이를 통해 HTTPS 프로토콜 지원
 
-![image 1](https://github.com/user-attachments/assets/990a4240-5098-45cf-b1f0-f00524521072)
+![image](https://github.com/user-attachments/assets/fdee41d3-d44f-4339-914a-ed474714e6df)
 
 SSL/TLS 라이브러리 초기화와 모든 암호화 알고리즘 추가
 
