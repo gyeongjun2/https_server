@@ -33,14 +33,16 @@
 
 **HTTPS 서버 구현**
 
-- openssl 라이브러리를 이용하여 SSL/TLS 기반의 안전한 통신을 지원하는 웹 서버 구현
-- 서버에서 자체 서명된 인증서를 생성하고 이를 통해 HTTPS 프로토콜 지원
-
-
-
 ![res3](https://github.com/user-attachments/assets/5e2e2791-11b6-44fc-9703-15673396f94e)
 
 https server 실행
+---------------------------------
+
+
+![스크린샷 2024-12-07 174707](https://github.com/user-attachments/assets/d54b3d5f-b953-4c42-a7df-01e272499461)
+
+- openssl 라이브러리를 이용하여 SSL/TLS 기반의 안전한 통신을 지원하는 웹 서버 구현
+- 서버에서 자체 서명된 인증서를 생성하고 이를 통해 HTTPS 프로토콜 지원
 
 **클라이언트 요청 처리**
 
