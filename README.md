@@ -42,12 +42,13 @@ https server 실행
 
 ![res3](https://github.com/user-attachments/assets/5e2e2791-11b6-44fc-9703-15673396f94e)
 
-https server 메인 화면
-
-![스크린샷 2024-12-07 174707](https://github.com/user-attachments/assets/d54b3d5f-b953-4c42-a7df-01e272499461)
 
 
+![image](https://github.com/user-attachments/assets/654070a7-1351-4b67-85a4-97eea33d233b)
 
+->현재 자체 서명 인증서를 사용했기 때문에 인증서 발급기관이 공인되지 않음. 따라서 브라우저가 신뢰할 수 없다고 표시되었지만 SSL/TLS를 통한 암호화는 활성화 되어있기 때문에 HTTPS는 적용되어있음.
+
+<br><br>
 
 **클라이언트 요청 처리**
 
