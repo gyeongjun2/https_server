@@ -1,7 +1,7 @@
 # RaspberryPi를 이용한 HTTPS server 구현
 
 ## 프로젝트 소개
-- 라즈베리파이를 활용하여 HTTPS 프로토콜을 지원하는 안전한 웹 서버를 구현했습니다. 이를 위해 OpenSSL을 사용하여 SSL/TLS 인증서를 생성 및 설정하고 기존 HTTP 기반 서버를 HTTPS로 전환하여 보안 통신 환경을 구축합니다.
+- 라즈베리파이를 활용하여 HTTPS 프로토콜을 지원하는 안전한 웹 서버를 구현했습니다. 이를 위해 OpenSSL을 사용하여 SSL/TLS 인증서를 생성 및 설정하고 기존 HTTP 기반 서버를 HTTPS로 전환하여 보안 통신 환경을 구축했습니다.
 
 **설계 계획**
 1. **HTTP-Server 구현**
@@ -37,8 +37,7 @@
 
 ![33](https://github.com/user-attachments/assets/92bf7922-8125-458f-837c-239b2d72c91f)
 
-SSL 인증서 생성 방법
-→ 자체 서명된 인증서를 사용하기 위해 new_cert.pem과 new_key.pem 파일을 직접 만들었습니다.
+SSL 인증서 생성 → 자체 서명된 인증서를 사용하기 위해 new_cert.pem과 new_key.pem 파일을 직접 만들었습니다.
 
 <br><br>
 
