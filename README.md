@@ -56,11 +56,12 @@ https server 실행
 
 **클라이언트 요청 처리**
 
-- HTTP GET 요청을 처리하고 클라이언트(브라우저)에게 파일을 반환하는 기능 구현
+- HTTP GET 요청을 처리하고 클라이언트(브라우저)에게 파일 데이터를 반환하는 기능 구현
 - HTTPS로 요청을 받아 암호화된 데이터 처리
 - 클라이언트와 서버 간 모든 데이터가 SSL/TLS를 통해 암호화되어 전송되므로 MITM(man in the middle attack)같은 공격과 데이터 도청을 방지
 
-![image 1](https://github.com/user-attachments/assets/58fd11e8-bd08-4e2d-9164-0b74e6107de9)
+![스크린샷 2024-12-07 174736](https://github.com/user-attachments/assets/a09ec476-f302-4863-a99f-5a72dbe81b78)
+
 
 ![스크린샷 2024-12-07 174538](https://github.com/user-attachments/assets/d4b8eec0-fe9a-476d-b002-db7ab272c278)
 
