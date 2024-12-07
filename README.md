@@ -58,7 +58,8 @@ https server 실행
 
 ![image 1](https://github.com/user-attachments/assets/58fd11e8-bd08-4e2d-9164-0b74e6107de9)
 
-![%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-11-03_161750](https://github.com/user-attachments/assets/e502f45f-d087-4221-90cd-f914873298da)
+![스크린샷 2024-12-07 174538](https://github.com/user-attachments/assets/d4b8eec0-fe9a-476d-b002-db7ab272c278)
+
 
 ### 향후 보완
 - 현재는 자체 서명된 인증서를 사용하여 HTTPS를 구현했지만 공인 인증기관을 통한 공인인증서를 발급받아 적용해야 브라우저의 보안 경고를 제거할 수 있음.
