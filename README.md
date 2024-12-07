@@ -38,7 +38,7 @@ SSL 인증서 생성 방법
 - 서버에서 자체 서명된 인증서를 생성하고 이를 통해 HTTPS 프로토콜 지원
 - openssl 라이브러리를 이용하여 SSL/TLS 기반의 안전한 통신을 지원하는 웹 서버 구현
 
-https server 실행
+HTTPS Server 실행
 
 ![res3](https://github.com/user-attachments/assets/5e2e2791-11b6-44fc-9703-15673396f94e)
 
@@ -50,7 +50,8 @@ https server 실행
 
 ![스크린샷 2024-12-07 183053](https://github.com/user-attachments/assets/f9decb06-6e9b-45e2-be29-16f8be307f7e)
 
-- Wireshark를 이용해 서버-클라이언트간 TSL 핸드셰이크(client Hello -> Server Hello -> Change Cipher Spec -> Application Data) 확인 -> HTTPS 연결 설정 확인
+WireShark를 이용한 HTTPS 패킷 분석
+- 서버-클라이언트간 TSL 핸드셰이크(client Hello -> Server Hello -> Change Cipher Spec -> Application Data) 확인 -> HTTPS 연결 설정 확인
 
 <br><br>
 
