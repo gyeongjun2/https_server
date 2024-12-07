@@ -133,6 +133,7 @@ void *handle_client_thread(void *arg) {
 
     sscanf(buf, "%s %s %s", method, path, version);
 
+
     if (strcmp(method, "GET") != 0) {
         SSL_write(ssl, "HTTP/1.1 405 Method Not Allowed\r\n\r\n", 36);
         SSL_shutdown(ssl);
@@ -142,11 +143,16 @@ void *handle_client_thread(void *arg) {
         return NULL;
     }
 
-    char *filename = path + 1;
+
+    if (strcmp(path, "/") == 0) {
+        strcpy(path, "/index.html"); //기본 페이지 리다이렉트
+    }
+
+    char *filename = path + 1; 
 
     fd = open(filename, O_RDONLY);
-
     if (fd == -1) {
+
         char *notFound = "HTTP/1.1 404 Not Found\r\n\r\nFile Not Found";
         SSL_write(ssl, notFound, strlen(notFound));
         SSL_shutdown(ssl);
@@ -156,8 +162,10 @@ void *handle_client_thread(void *arg) {
         return NULL;
     }
 
-    char *ok_response = "HTTP/1.1 200 OK\r\n\r\n";
+
+    char *ok_response = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n";
     SSL_write(ssl, ok_response, strlen(ok_response));
+
 
     while ((read_len = read(fd, buf, SIZE)) > 0) {
         SSL_write(ssl, buf, read_len);
@@ -165,6 +173,7 @@ void *handle_client_thread(void *arg) {
 
     close(fd);
 
+   
     SSL_shutdown(ssl);
     SSL_free(ssl);
     close(sock);
@@ -172,6 +181,7 @@ void *handle_client_thread(void *arg) {
 
     return NULL;
 }
+
 
 
 void error_handling(char *message) {
