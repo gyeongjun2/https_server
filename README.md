@@ -32,11 +32,14 @@
 SSL 인증서 생성 방법
 → 자체 서명된 인증서를 사용하기 위해 new_cert.pem과 new_key.pem 파일을 직접 만든다.
 
+
+
+
 **HTTPS 서버 구현**
 
-![res3](https://github.com/user-attachments/assets/5e2e2791-11b6-44fc-9703-15673396f94e)
-
 https server 실행
+
+![res3](https://github.com/user-attachments/assets/5e2e2791-11b6-44fc-9703-15673396f94e)
 
 
 ![스크린샷 2024-12-07 174707](https://github.com/user-attachments/assets/d54b3d5f-b953-4c42-a7df-01e272499461)
