@@ -58,7 +58,7 @@ HTTPS Server 실행
 
 ![스크린샷 2024-12-07 183053](https://github.com/user-attachments/assets/f9decb06-6e9b-45e2-be29-16f8be307f7e)
 
-WireShark를 이용한 HTTPS 패킷 분석
+**WireShark를 이용한 HTTPS 패킷 분석**
 - 서버-클라이언트간 TSL 핸드셰이크(client Hello -> Server Hello -> Change Cipher Spec -> Application Data) 확인 -> HTTPS 연결 설정 확인
 
 <br><br>
