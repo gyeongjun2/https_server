@@ -48,6 +48,10 @@ https server 실행
 
 ->현재 자체 서명 인증서를 사용했기 때문에 인증서 발급기관이 공인되지 않음. 따라서 브라우저가 신뢰할 수 없다고 표시되었지만 SSL/TLS를 통한 암호화는 활성화 되어있기 때문에 HTTPS는 적용되어있음.
 
+![스크린샷 2024-12-07 183053](https://github.com/user-attachments/assets/f9decb06-6e9b-45e2-be29-16f8be307f7e)
+
+- Wireshark를 이용해 서버-클라이언트간 TSL 핸드셰이크(client Hello -> Server Hello -> Change Cipher Spec -> Application Data) 확인 -> HTTPS 연결 설정 확인
+
 <br><br>
 
 **클라이언트 요청 처리**
