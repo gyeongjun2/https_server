@@ -11,7 +11,7 @@
 2. **HTTPS-Server 확장**
     - HTTP 서버를 기반으로 SSL/TLS 암호화를 적용하여 HTTPS 서버로 확장
     - OpenSSL 라이브러리를 활용하여 TLS 핸드셰이크와 데이터 암호화 구현
-    - 자체 서명된 인증서를 생성하여 HTTPS 활성화
+    - 인증서를 생성하여 HTTPS 활성화
 
 3. **Raspberry Pi Porting**
     - 개발한 HTTPS 서버를 라즈베리파이에 배포하여 임베디드 환경에서 실행 가능하도록 설계
@@ -52,8 +52,6 @@ HTTPS Server 실행
 
 ->SSL/TLS를 통한 암호화는 활성화 상태로 HTTPS는 적용되있지만 브라우저에서는 신뢰할 수 없다고 표시되었습니다.
 
-![스크린샷 2024-12-07 183053](https://github.com/user-attachments/assets/f9decb06-6e9b-45e2-be29-16f8be307f7e)
-
 
 <br><br>
 
@@ -63,15 +61,23 @@ HTTPS Server 실행
 - HTTPS로 요청을 받아 암호화된 데이터 처리
 
 ![스크린샷 2024-12-07 174538](https://github.com/user-attachments/assets/d4b8eec0-fe9a-476d-b002-db7ab272c278)
+
 ->서버의 test파일을 요청해도 위와 동일하게 HTTPS가 신뢰할 수 없다고 표시되었습니다.
 
 ## TroubleShooting
 
-문제 발생 - HTTPS 통신 진행시 브라우저에서 보안 경고가 발생하였습니다.
+문제 상황 - HTTPS 통신 진행시 브라우저에서 보안 경고가 발생하여 신뢰할 수 없는 인증서로 적용되는 문제가 발생하였습니다.
 
-보안경고 발생 이유? - 웹 브라우저는 자체 서명된 사설인증서를 인정해주지 않기 때문에 발생하였습니다.
+보안경고 발생 이유 - 웹 브라우저는 자체 서명된 사설인증서를 인정해주지 않기 때문에 보안경고가 발생한다는 것을 파악하였습니다.
 
-해결 방법? - 신뢰할 수 있는 인증 기관에서 인증서가 발급되지 않던 문제였기 때문에 인증 기관에서 공인인증서를 발급받고 서버에 적용하였습니다.
+해결 방법 - 문제의 원인이 공인된 인증서를 적용하지 않아 발생한 것으로 파악하고 공인 인증 기관을 통해 공인인증서를 발급받고 도메인을 연결하여 서버에 적용하였습니다.
+결과적으로 브라우저에서 보안 경고가 사라지고 안전하게 HTTPS 연결이 진행되는 것을 확인하였습니다.
+
+적용 전 화면
+
+![image](https://github.com/user-attachments/assets/654070a7-1351-4b67-85a4-97eea33d233b)
+
+적용 후 화면
 
 ![스크린샷 2024-12-17 153442](https://github.com/user-attachments/assets/71f7fd19-96ec-41f7-8932-2b8906b83ed6)
 
@@ -79,7 +85,7 @@ HTTPS Server 실행
 
 ->웹 브라우저가 신뢰할 수 있는 인증서로 설정하여 보안 경고 사라짐
 
-**WireShark를 이용한 HTTPS 패킷 분석**
+WireShark를 이용한 HTTPS 패킷 분석
 
 ![스크린샷 2024-12-17 151321](https://github.com/user-attachments/assets/8b63b2fa-27b5-42d6-b3d0-9343c3e61fd0)
 
